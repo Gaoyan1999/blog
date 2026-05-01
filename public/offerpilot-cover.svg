@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1252 768" role="img" aria-labelledby="title desc">
+  <title id="title">OfferPilot product interface</title>
+  <desc id="desc">Three-column OfferPilot interface with job matches, an AI instruction panel, and selected job match details.</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#0f1a33" flood-opacity=".16"/>
+    </filter>
+    <linearGradient id="blue" x1="0" x2="1">
+      <stop offset="0" stop-color="#095cff"/>
+      <stop offset="1" stop-color="#2d6cff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1252" height="768" fill="#eef3fb"/>
+
+  <g filter="url(#shadow)">
+    <rect x="8" y="10" width="360" height="748" rx="14" fill="#ffffff" stroke="#d7e2f4"/>
+    <rect x="386" y="10" width="430" height="748" rx="14" fill="#ffffff" stroke="#d7e2f4"/>
+    <rect x="835" y="10" width="417" height="748" rx="14" fill="#ffffff" stroke="#d7e2f4"/>
+  </g>
+
+  <g transform="translate(32 34)">
+    <text x="0" y="25" font-family="Georgia, serif" font-size="34" font-weight="700" fill="#075dff">OfferPilot</text>
+    <circle cx="294" cy="16" r="20" fill="#a83fd2"/>
+    <text x="0" y="62" font-family="Arial, sans-serif" font-size="16" fill="#526988">Autonomous job search and</text>
+    <text x="0" y="86" font-family="Arial, sans-serif" font-size="16" fill="#526988">tailored resume generation.</text>
+    <text x="0" y="118" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1.2" fill="#075dff">WORKSPACE SAVED</text>
+  </g>
+
+  <line x1="8" y1="178" x2="368" y2="178" stroke="#d7e2f4"/>
+  <circle cx="340" cy="178" r="5" fill="#2d6cff"/>
+  <text x="66" y="223" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.1" fill="#667b99">UPLOADED CV</text>
+  <rect x="193" y="193" width="160" height="46" rx="12" fill="#f4f7ff" stroke="#9dbdff"/>
+  <text x="240" y="222" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.1" fill="#075dff">JOB SEARCH</text>
+
+  <g transform="translate(23 269)">
+    <rect width="330" height="120" rx="12" fill="#ffffff" stroke="#075dff" stroke-width="1.5"/>
+    <rect x="14" y="38" width="43" height="43" rx="12" fill="url(#blue)"/>
+    <text x="25" y="68" font-family="Arial, sans-serif" font-size="26" font-weight="800" fill="#ffffff">86</text>
+    <text x="70" y="31" font-family="Arial, sans-serif" font-size="16" font-weight="800" fill="#10182b">Full Stack Engineer, AI</text>
+    <text x="70" y="53" font-family="Arial, sans-serif" font-size="16" font-weight="800" fill="#10182b">Platform</text>
+    <text x="70" y="76" font-family="Arial, sans-serif" font-size="15" fill="#526988">Atlassian - Remote -</text>
+    <text x="70" y="99" font-family="Arial, sans-serif" font-size="15" fill="#526988">Australia - Fallback</text>
+    <circle cx="304" cy="60" r="16" fill="#ffffff" stroke="#ffb9bf"/>
+    <text x="298" y="66" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#ff3b48">×</text>
+  </g>
+
+  <g transform="translate(36 425)" font-family="Arial, sans-serif">
+    <rect x="0" y="2" width="43" height="43" rx="12" fill="url(#blue)"/>
+    <text x="10" y="32" font-size="26" font-weight="800" fill="#ffffff">78</text>
+    <text x="56" y="16" font-size="16" font-weight="800" fill="#10182b">AI Product Engineer</text>
+    <text x="56" y="40" font-size="15" fill="#526988">Canva - Sydney, Australia -</text>
+    <text x="56" y="64" font-size="15" fill="#526988">Fallback</text>
+    <circle cx="290" cy="27" r="16" fill="#ffffff" stroke="#ffb9bf"/>
+    <text x="284" y="33" font-size="22" font-weight="700" fill="#ff3b48">×</text>
+  </g>
+
+  <g transform="translate(36 536)" font-family="Arial, sans-serif">
+    <rect x="0" y="0" width="43" height="43" rx="12" fill="url(#blue)"/>
+    <text x="10" y="30" font-size="26" font-weight="800" fill="#ffffff">73</text>
+    <text x="56" y="13" font-size="16" font-weight="800" fill="#10182b">Product Engineer</text>
+    <text x="56" y="37" font-size="15" fill="#526988">RelayWorks - Remote - APAC</text>
+    <text x="56" y="61" font-size="15" fill="#526988">- Fallback</text>
+  </g>
+
+  <g transform="translate(414 38)">
+    <text x="0" y="34" font-family="Georgia, serif" font-size="46" font-weight="800" fill="#0e1730">
+      <tspan fill="#075dff">T</tspan>ell OfferPilot
+    </text>
+    <text x="0" y="80" font-family="Georgia, serif" font-size="46" font-weight="800" fill="#0e1730">what to do.</text>
+  </g>
+  <line x1="386" y1="153" x2="816" y2="153" stroke="#d7e2f4"/>
+  <g transform="translate(416 182)">
+    <rect width="304" height="159" rx="15" fill="#ffffff" stroke="#d7e2f4" filter="url(#shadow)"/>
+    <text x="18" y="28" font-family="Arial, sans-serif" font-size="12" font-weight="800" letter-spacing="1.1" fill="#075dff">AI</text>
+    <text x="18" y="58" font-family="Arial, sans-serif" font-size="17" fill="#10182b">Tell me what kind of role you want,</text>
+    <text x="18" y="85" font-family="Arial, sans-serif" font-size="17" fill="#10182b">upload a CV, or ask me to search. I</text>
+    <text x="18" y="112" font-family="Arial, sans-serif" font-size="17" fill="#10182b">will collect missing details before</text>
+    <text x="18" y="139" font-family="Arial, sans-serif" font-size="17" fill="#10182b">ranking jobs.</text>
+  </g>
+  <line x1="386" y1="704" x2="816" y2="704" stroke="#d7e2f4"/>
+  <rect x="403" y="719" width="306" height="46" rx="12" fill="#fbfdff" stroke="#d7e2f4"/>
+  <text x="418" y="748" font-family="Arial, sans-serif" font-size="16" fill="#94a4bb">Example: I want software jobs in Syd</text>
+  <rect x="721" y="719" width="78" height="46" rx="12" fill="url(#blue)"/>
+  <text x="740" y="748" font-family="Arial, sans-serif" font-size="16" font-weight="800" fill="#ffffff">Send</text>
+
+  <rect x="835" y="10" width="417" height="121" rx="14" fill="#111b31"/>
+  <rect x="859" y="35" width="126" height="27" rx="14" fill="#18243d" stroke="#46536b"/>
+  <circle cx="876" cy="49" r="4" fill="#2d6cff"/>
+  <text x="890" y="53" font-family="Arial, sans-serif" font-size="12" font-weight="800" letter-spacing="1" fill="#ffffff">CONTEXT PANEL</text>
+  <text x="858" y="101" font-family="Georgia, serif" font-size="34" font-weight="800" fill="#ffffff">Selected Job</text>
+
+  <g transform="translate(857 153)" font-family="Arial, sans-serif">
+    <rect width="135" height="31" rx="15" fill="#edf4ff" stroke="#9dbdff"/>
+    <circle cx="18" cy="15.5" r="5" fill="#5992ff"/>
+    <text x="32" y="21" font-size="14" font-weight="800" letter-spacing="1.1" fill="#075dff">MATCH DETAIL</text>
+    <text x="310" y="41" font-size="58" font-weight="900" fill="#10182b">86</text>
+    <text x="0" y="50" font-size="19" font-weight="800" fill="#10182b">Full Stack Engineer, AI Platform</text>
+    <text x="0" y="78" font-size="16" fill="#526988">Atlassian - Remote - Australia - remote -</text>
+    <text x="0" y="104" font-size="16" fill="#526988">Fallback</text>
+    <text x="0" y="146" font-size="17" fill="#526988">Develop AI platform features across frontend</text>
+    <text x="0" y="174" font-size="17" fill="#526988">and backend services. Role uses TypeScript,</text>
+    <text x="0" y="202" font-size="17" fill="#526988">Node.js, REST APIs, telemetry, and product</text>
+    <text x="0" y="230" font-size="17" fill="#526988">iteration.</text>
+    <text x="0" y="282" font-size="16" font-weight="800" fill="#075dff">Open job URL</text>
+  </g>
+
+  <g transform="translate(857 454)" font-family="Arial, sans-serif" font-size="16" fill="#526988">
+    <rect width="372" height="99" rx="8" fill="#f0f4f9"/>
+    <rect width="3" height="99" fill="#a9c8ff"/>
+    <text x="15" y="29">Strong alignment with target Software</text>
+    <text x="15" y="57">Engineer role and candidate's AI/LLM</text>
+    <text x="15" y="85">interests.</text>
+    <rect y="111" width="372" height="99" rx="8" fill="#f0f4f9"/>
+    <rect y="111" width="3" height="99" fill="#a9c8ff"/>
+    <text x="15" y="140">Remote - Australia matches the candidate's</text>
+    <text x="15" y="168">preferred remote work mode and Sydney-</text>
+    <text x="15" y="196">based target constraints.</text>
+    <rect y="222" width="372" height="76" rx="8" fill="#f0f4f9"/>
+    <rect y="222" width="3" height="76" fill="#a9c8ff"/>
+    <text x="15" y="251">Required TypeScript, React, and AI are</text>
+    <text x="15" y="279">directly present in the candidate profile.</text>
+  </g>
+</svg>

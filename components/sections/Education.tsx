@@ -11,6 +11,13 @@ function getSchoolLogo(school: string) {
     };
   }
 
+  if (school === "Shanghai Institute of Technology") {
+    return {
+      src: "/sit-logo.jpeg",
+      alt: "Shanghai Institute of Technology logo",
+    };
+  }
+
   return null;
 }
 

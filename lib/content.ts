@@ -11,21 +11,158 @@ export const profile = {
   linkedin: "https://www.linkedin.com/",
 };
 
-export type Project = {
-  numeral: "I" | "II" | "III" | "IV";
-  title: string;
-  org: string;
-  period: string;
-  stack: string[];
-  highlights: string[];
+export type ProjectTimelineAction = {
+  type: "github" | "video" | "project";
+  href: string;
+  label: string;
 };
 
-export const projects: Project[] = [
+export type ProjectTimelineItem =
+  | {
+      type: "note";
+      id: string;
+      date?: string;
+      eyebrow?: string;
+      title?: string;
+      body: string;
+    }
+  | {
+      type: "project";
+      numeral: "I" | "II" | "III" | "IV" | "V";
+      title: string;
+      org: string;
+      period: string;
+      link?: string;
+      logo?: {
+        src: string;
+        alt: string;
+      };
+      stack: string[];
+      highlights: string[];
+    }
+  | {
+      type: "mediaProject";
+      id: string;
+      title: string;
+      org: string;
+      period: string;
+      description: string;
+      actions: ProjectTimelineAction[];
+      media: {
+        kind: "image" | "video";
+        src: string;
+        href?: string;
+        alt: string;
+        label: string;
+      };
+      stack: string[];
+    };
+
+export const projectTimeline: ProjectTimelineItem[] = [
   {
-    numeral: "I",
-    title: "Word Plugin System",
+    type: "note",
+    id: "2026-ai-work",
+    date: "2026.04",
+    eyebrow: "Hackathon Builds in 2026",
+    title: "Recently, I've joined some hackathons and built a few interesting things.",
+    body: "These projects are small but practical experiments around AI products, education, job search, and developer tooling.",
+  },
+  {
+    type: "mediaProject",
+    id: "offer-pilot",
+    title: "Offer Pilot",
+    org: "Codex Hackathon",
+    period: "2026.04.29",
+    actions: [
+      {
+        type: "github",
+        href: "https://github.com/Gaoyan1999/offer-pilot",
+        label: "OfferPilot GitHub repository",
+      },
+      {
+        type: "video",
+        href: "https://www.youtube.com/watch?v=sj5-4IvNbr4",
+        label: "OfferPilot demo video",
+      },
+    ],
+    description:
+      "Built an autonomous job-search assistant that reads a candidate CV, ranks roles by fit, explains match details, and helps generate tailored resumes.",
+    media: {
+      kind: "image",
+      src: "/offerpilot-cover.svg",
+      href: "https://github.com/Gaoyan1999/offer-pilot",
+      alt: "OfferPilot product interface showing job matches, an AI instruction panel, and selected job match details.",
+      label: "View OfferPilot project",
+    },
+    stack: ["Next.js", "OpenAI", "Supabase", "Chrome Extension"],
+  },
+  {
+    type: "mediaProject",
+    id: "bridge-ed",
+    title: "Bridge Ed",
+    org: "Cambridge EdTech Hackathon",
+    period: "2026.04.10",
+    actions: [
+      {
+        type: "github",
+        href: "https://github.com/Gaoyan1999/bridge-ed",
+        label: "Bridge Ed GitHub repository",
+      },
+      {
+        type: "video",
+        href: "https://www.youtube.com/watch?v=RliMULNUMrQ",
+        label: "Bridge Ed demo video",
+      },
+    ],
+    description:
+      "Built an AI-assisted school-home workspace for teacher, parent, and student collaboration, turning classroom goals into parent-friendly learning guidance and structured feedback.",
+    media: {
+      kind: "video",
+      src: "https://img.youtube.com/vi/RliMULNUMrQ/hqdefault.jpg",
+      href: "https://www.youtube.com/watch?v=RliMULNUMrQ",
+      alt: "Bridge Ed demo video thumbnail.",
+      label: "Bridge Ed demo video",
+    },
+    stack: ["React", "FastAPI", "LLMS", "IndexedDB"],
+  },
+  {
+    type: "note",
+    id: "open-source-note",
+    date: "2026.01.21",
+    title: "Recently I'm contributing to the open source community.",
+    body: "Checkstyle and Checker Framework have been my main focus: refactoring code, fixing bugs, and resolving static-analysis violations in mature Java tooling.",
+  },
+  {
+    type: "project",
+    numeral: "III",
+    title: "Open Source Static Analysis Contributions",
+    org: "Checkstyle · Checker Framework",
+    period: "2026.01.21",
+    link: "https://github.com/pulls?user=checkstyle&q=is%3Apr+author%3AGaoyan1999+archived%3Afalse+is%3Aclosed&user=checkstyle",
+    stack: ["Java", "Checkstyle", "Checker Framework", "Error Prone", "PIT"],
+    highlights: [
+      "Merged Checkstyle fixes for Checker Framework nullness violations, Error Prone warnings, and PIT mutation suppressions.",
+      "Contributed Checker Framework fixes around Nullness analysis and KeyFor propagation behavior.",
+      "Worked through review cycles in established open-source repositories with strict static-analysis and regression-test expectations.",
+    ],
+  },
+  {
+    type: "note",
+    id: "work-projects-note",
+    date: "2025.07",
+    title: "The following project was implemented in my work.",
+    body: "These production systems were built at Alpha LifeSci Tech, focusing on clinical-trial document authoring, AI-assisted writing, and collaborative editing workflows.",
+  },
+  {
+    type: "project",
+    numeral: "IV",
+    title: "Clinical Trial AI Agent for MS Word",
     org: "Alpha LifeSci Tech",
-    period: "2023.10 — 2025.07",
+    period: "2025.07",
+    logo: {
+      src: "/alphalife-logo.jpeg",
+      alt: "Alpha LifeSci Tech logo",
+    },
     stack: ["Vue", "TypeScript", "Word API", "LLMs", "Pinia"],
     highlights: [
       "Synchronised medical TFL tables between remote data and Word documents; optimised the algorithm and added a Pinia caching layer.",
@@ -35,10 +172,15 @@ export const projects: Project[] = [
     ],
   },
   {
-    numeral: "II",
+    type: "project",
+    numeral: "V",
     title: "Collaborative Rich-Text Document System",
     org: "Alpha LifeSci Tech",
-    period: "2022.01 — 2023.09",
+    period: "2023.09",
+    logo: {
+      src: "/alphalife-logo.jpeg",
+      alt: "Alpha LifeSci Tech logo",
+    },
     stack: ["Java", "Vue", "TypeScript", "WebSocket", "WebWorker"],
     highlights: [
       "Designed a distributed approval engine with electronic signatures and read-only commenting that resolved cross-node consistency issues.",
@@ -48,6 +190,18 @@ export const projects: Project[] = [
     ],
   },
 ];
+
+export type Project = {
+  numeral: "I" | "II" | "III" | "IV" | "V";
+  title: string;
+  org: string;
+  period: string;
+  link?: string;
+  stack: string[];
+  highlights: string[];
+};
+
+export const projects: Project[] = projectTimeline.filter((item) => item.type === "project");
 
 export type ExperienceItem = {
   company: string;
