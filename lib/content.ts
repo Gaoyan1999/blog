@@ -6,9 +6,8 @@ export const profile = {
   tagline:
     "Building precise, performant tools at the intersection of rich-text editing, AI, and pharma — currently pursuing a Master's at UTS in Sydney.",
   email: "danielgao.au@gmail.com",
-  // TODO: replace placeholders once Daniel confirms public profile URLs
-  github: "https://github.com/",
-  linkedin: "https://www.linkedin.com/",
+  github: "https://github.com/Gaoyan1999",
+  linkedin: "https://www.linkedin.com/in/daniel-gao-236037339/",
 };
 
 export type Project = {
