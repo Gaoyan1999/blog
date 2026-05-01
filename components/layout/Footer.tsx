@@ -12,22 +12,22 @@ export function Footer() {
           <span className="h-px w-12 bg-[color:var(--color-gold)]/50" />
         </div>
 
-        <p className="font-display text-xs uppercase tracking-[0.4em] text-[color:var(--color-gold)]">
+        <p className="font-display text-sm uppercase tracking-[0.32em] text-[color:var(--color-gold)]">
           {profile.name}
         </p>
 
-        <p className="font-body text-xs uppercase tracking-[0.25em] text-[color:var(--color-muted)]">
+        <p className="font-body text-sm uppercase tracking-[0.2em] text-[color:var(--color-muted)]">
           MMXXVI · Crafted in Sydney
         </p>
 
         <a
           href={`mailto:${profile.email}`}
-          className="font-body text-sm tracking-[0.15em] text-[color:var(--color-fg)]/70 transition-colors hover:text-[color:var(--color-gold)]"
+          className="font-body text-base tracking-[0.12em] text-[color:var(--color-fg)]/70 transition-colors hover:text-[color:var(--color-gold)]"
         >
           {profile.email}
         </a>
 
-        <p className="font-body text-[10px] uppercase tracking-[0.3em] text-[color:var(--color-muted)]/70">
+        <p className="font-body text-xs uppercase tracking-[0.24em] text-[color:var(--color-muted)]/70">
           © {year}
         </p>
       </div>

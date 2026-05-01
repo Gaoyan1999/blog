@@ -1,4 +1,5 @@
 import { experience } from "@/lib/content";
+import { LogoBadge } from "@/components/ui/LogoBadge";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function Experience() {
@@ -24,9 +25,12 @@ export function Experience() {
                 className="absolute -left-[34px] top-3 h-1.5 w-1.5 rotate-45 bg-[color:var(--color-gold)] md:-left-[42px]"
               />
 
-              <h3 className="font-display text-2xl uppercase tracking-[0.18em] text-[color:var(--color-gold)] md:text-3xl">
-                {item.company}
-              </h3>
+              <div className="flex flex-col gap-5 sm:flex-row sm:items-center">
+                <LogoBadge src="/alphalife-logo.jpeg" alt="Alpha LifeSci Tech logo" />
+                <h3 className="font-display text-2xl uppercase tracking-[0.18em] text-[color:var(--color-gold)] md:text-3xl">
+                  {item.company}
+                </h3>
+              </div>
 
               <ul className="mt-4 space-y-1">
                 {item.roles.map((role) => (
@@ -34,17 +38,17 @@ export function Experience() {
                     key={role.title}
                     className="flex flex-wrap items-baseline justify-between gap-x-6 border-b border-[color:var(--color-gold)]/15 pb-2"
                   >
-                    <span className="font-body text-base text-[color:var(--color-fg)]">
+                    <span className="font-body text-lg text-[color:var(--color-fg)]">
                       {role.title}
                     </span>
-                    <span className="font-display text-sm uppercase tracking-[0.25em] text-[color:var(--color-muted)]">
+                    <span className="font-display text-base uppercase tracking-[0.18em] text-[color:var(--color-muted)]">
                       {role.period}
                     </span>
                   </li>
                 ))}
               </ul>
 
-              <ul className="mt-6 space-y-3 text-sm leading-relaxed text-[color:var(--color-fg)]/85 md:text-base">
+              <ul className="mt-6 space-y-3 text-base leading-relaxed text-[color:var(--color-fg)]/85 md:text-lg">
                 {item.bullets.map((line) => (
                   <li key={line} className="flex gap-3">
                     <span

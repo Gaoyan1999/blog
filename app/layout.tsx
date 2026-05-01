@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Marcellus, Josefin_Sans } from "next/font/google";
 import "./globals.css";
 
@@ -20,6 +20,11 @@ export const metadata: Metadata = {
   title: "Daniel Gao — Full-Stack Software Engineer",
   description:
     "Daniel Gao is a full-stack software engineer in Sydney. Rich-text editing, AI-driven document tooling, and pharma-tech.",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
