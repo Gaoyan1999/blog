@@ -4,7 +4,7 @@ export const profile = {
   title: "Full-Stack Software Engineer",
   location: "Sydney, Australia",
   tagline:
-    "Building precise, performant tools at the intersection of rich-text editing, AI, and pharma — currently pursuing a Master's at UTS in Sydney.",
+    "I love coding, exploring new technologies, and paying attention to code quality, clean structure, and neat implementation details — currently pursuing a Master’s at UTS in Sydney.",
   email: "danielgao.au@gmail.com",
   // TODO: replace placeholders once Daniel confirms public profile URLs
   github: "https://github.com/",
