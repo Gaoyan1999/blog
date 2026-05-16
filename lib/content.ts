@@ -27,7 +27,6 @@ export type ProjectTimelineItem =
     }
   | {
       type: "project";
-      numeral: "I" | "II" | "III" | "IV" | "V" | "VI";
       title: string;
       org: string;
       period: string;
@@ -62,17 +61,38 @@ export const projectTimeline: ProjectTimelineItem[] = [
   {
     type: "note",
     id: "2026-ai-work",
-    date: "2026.04",
+    date: "2026.05",
     eyebrow: "Hackathon Builds in 2026",
     title: "Recently, I've joined some hackathons and built a few interesting things.",
     body: "These projects are small but practical experiments around AI products, education, job search, and developer tooling.",
+  },
+  {
+    type: "project",
+    title: "Lingua Mate",
+    org: "Personal AI Learning Tool",
+    period: "2026.05",
+    link: "https://github.com/Gaoyan1999/lingua-mate",
+    actions: [
+      {
+        type: "bilibili",
+        href: "https://www.bilibili.com/video/BV1yTRzBpEPk/?spm_id_from=333.1387.homepage.video_card.click",
+        label: "Lingua Mate Bilibili video",
+      },
+    ],
+    stack: ["Python", "TypeScript", "Vite", "Whisper", "Codex Skill"],
+    highlights: [
+      "Built a Codex skill that turns English videos or podcasts into local language-learning web pages.",
+      "Supports local media files plus concrete Bilibili and YouTube video URLs, then extracts audio and transcribes with Whisper.",
+      "Generates transcript chunks, Chinese translations, connected-speech notes, vocabulary notes, and validated lesson JSON.",
+      "Links finished lessons into a local Vite learner app for browser-based study.",
+    ],
   },
   {
     type: "mediaProject",
     id: "offer-pilot",
     title: "Offer Pilot",
     org: "Codex Hackathon",
-    period: "2026.04.29",
+    period: "2026.04",
     actions: [
       {
         type: "github",
@@ -101,7 +121,7 @@ export const projectTimeline: ProjectTimelineItem[] = [
     id: "bridge-ed",
     title: "Bridge Ed",
     org: "Cambridge EdTech Hackathon",
-    period: "2026.04.10",
+    period: "2026.04",
     actions: [
       {
         type: "github",
@@ -126,40 +146,17 @@ export const projectTimeline: ProjectTimelineItem[] = [
     stack: ["React", "FastAPI", "LLMS", "IndexedDB"],
   },
   {
-    type: "project",
-    numeral: "III",
-    title: "Lingua Mate",
-    org: "Personal AI Learning Tool",
-    period: "2026.05.07",
-    link: "https://github.com/Gaoyan1999/lingua-mate",
-    actions: [
-      {
-        type: "bilibili",
-        href: "https://www.bilibili.com/video/BV1yTRzBpEPk/?spm_id_from=333.1387.homepage.video_card.click",
-        label: "Lingua Mate Bilibili video",
-      },
-    ],
-    stack: ["Python", "TypeScript", "Vite", "Whisper", "Codex Skill"],
-    highlights: [
-      "Built a Codex skill that turns English videos or podcasts into local language-learning web pages.",
-      "Supports local media files plus concrete Bilibili and YouTube video URLs, then extracts audio and transcribes with Whisper.",
-      "Generates transcript chunks, Chinese translations, connected-speech notes, vocabulary notes, and validated lesson JSON.",
-      "Links finished lessons into a local Vite learner app for browser-based study.",
-    ],
-  },
-  {
     type: "note",
     id: "open-source-note",
-    date: "2026.01.21",
+    date: "2026.01",
     title: "Recently I'm contributing to the open source community.",
     body: "Checkstyle and Checker Framework have been my main focus: refactoring code, fixing bugs, and resolving static-analysis violations in mature Java tooling.",
   },
   {
     type: "project",
-    numeral: "IV",
     title: "Open Source Static Analysis Contributions",
     org: "Checkstyle · Checker Framework",
-    period: "2026.01.21",
+    period: "2026.01",
     link: "https://github.com/pulls?user=checkstyle&q=is%3Apr+author%3AGaoyan1999+archived%3Afalse+is%3Aclosed&user=checkstyle",
     stack: ["Java", "Checkstyle", "Checker Framework", "Error Prone", "PIT"],
     highlights: [
@@ -177,7 +174,6 @@ export const projectTimeline: ProjectTimelineItem[] = [
   },
   {
     type: "project",
-    numeral: "V",
     title: "Clinical Trial AI Agent for MS Word",
     org: "Alpha LifeSci Tech",
     period: "2025.07",
@@ -195,7 +191,6 @@ export const projectTimeline: ProjectTimelineItem[] = [
   },
   {
     type: "project",
-    numeral: "VI",
     title: "Collaborative Rich-Text Document System",
     org: "Alpha LifeSci Tech",
     period: "2023.09",
@@ -214,7 +209,6 @@ export const projectTimeline: ProjectTimelineItem[] = [
 ];
 
 export type Project = {
-  numeral: "I" | "II" | "III" | "IV" | "V" | "VI";
   title: string;
   org: string;
   period: string;
