@@ -27,7 +27,6 @@ export type ProjectTimelineItem =
     }
   | {
       type: "project";
-      numeral: "I" | "II" | "III" | "IV" | "V" | "VI";
       title: string;
       org: string;
       period: string;
@@ -69,7 +68,6 @@ export const projectTimeline: ProjectTimelineItem[] = [
   },
   {
     type: "project",
-    numeral: "III",
     title: "Lingua Mate",
     org: "Personal AI Learning Tool",
     period: "2026.05",
@@ -156,7 +154,6 @@ export const projectTimeline: ProjectTimelineItem[] = [
   },
   {
     type: "project",
-    numeral: "IV",
     title: "Open Source Static Analysis Contributions",
     org: "Checkstyle · Checker Framework",
     period: "2026.01",
@@ -177,7 +174,6 @@ export const projectTimeline: ProjectTimelineItem[] = [
   },
   {
     type: "project",
-    numeral: "V",
     title: "Clinical Trial AI Agent for MS Word",
     org: "Alpha LifeSci Tech",
     period: "2025.07",
@@ -195,7 +191,6 @@ export const projectTimeline: ProjectTimelineItem[] = [
   },
   {
     type: "project",
-    numeral: "VI",
     title: "Collaborative Rich-Text Document System",
     org: "Alpha LifeSci Tech",
     period: "2023.09",
@@ -214,7 +209,6 @@ export const projectTimeline: ProjectTimelineItem[] = [
 ];
 
 export type Project = {
-  numeral: "I" | "II" | "III" | "IV" | "V" | "VI";
   title: string;
   org: string;
   period: string;
