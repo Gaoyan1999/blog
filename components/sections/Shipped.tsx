@@ -1,7 +1,7 @@
 import Image from "next/image";
 import type { CSSProperties } from "react";
 import { ExternalLink, Github, Play } from "lucide-react";
-import { projectTimeline } from "@/lib/content";
+import { projectTimeline, type ProjectTimelineAction } from "@/lib/content";
 import { DecoCard } from "@/components/ui/DecoCard";
 import { LogoBadge } from "@/components/ui/LogoBadge";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -41,13 +41,39 @@ function techChipStyle(tech: string): CSSProperties {
   };
 }
 
-function actionIcon(type: "github" | "video" | "project") {
+function BilibiliIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="1.8"
+      className={className}
+      aria-hidden
+    >
+      <path d="m7.5 3.75 2.25 2.5" />
+      <path d="m16.5 3.75-2.25 2.5" />
+      <rect x="3.75" y="6.5" width="16.5" height="13.25" rx="3.25" />
+      <path d="M8.25 11.5v3.75" />
+      <path d="M15.75 11.5v3.75" />
+      <path d="M10 17h4" />
+    </svg>
+  );
+}
+
+function actionIcon(type: ProjectTimelineAction["type"]) {
   if (type === "github") {
     return <Github className="h-4 w-4" />;
   }
 
   if (type === "video") {
     return <Play className="ml-0.5 h-4 w-4 fill-current" />;
+  }
+
+  if (type === "bilibili") {
+    return <BilibiliIcon className="h-[18px] w-[18px]" />;
   }
 
   return <ExternalLink className="h-4 w-4" />;
@@ -224,16 +250,32 @@ export function Shipped() {
                           <p className="mt-2 font-body text-base text-[color:var(--color-fg)]/80">
                             {item.org}
                           </p>
-                          {item.link ? (
-                            <a
-                              href={item.link}
-                              target="_blank"
-                              rel="noreferrer"
-                              className="mt-4 inline-flex items-center gap-2 font-body text-xs uppercase tracking-[0.2em] text-[color:var(--color-gold)] transition-colors hover:text-[color:var(--color-gold-light)]"
-                            >
-                              View project
-                              <ExternalLink className="h-3.5 w-3.5" />
-                            </a>
+                          {item.link || item.actions?.length ? (
+                            <div className="mt-4 flex flex-wrap items-center gap-3">
+                              {item.link ? (
+                                <a
+                                  href={item.link}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                  className="inline-flex items-center gap-2 font-body text-xs uppercase tracking-[0.2em] text-[color:var(--color-gold)] transition-colors hover:text-[color:var(--color-gold-light)]"
+                                >
+                                  View project
+                                  <ExternalLink className="h-3.5 w-3.5" />
+                                </a>
+                              ) : null}
+                              {item.actions?.map((action) => (
+                                <a
+                                  key={`${action.type}-${action.href}`}
+                                  href={action.href}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                  aria-label={action.label}
+                                  className="inline-flex h-9 w-9 items-center justify-center border border-[color:var(--color-gold)]/35 text-[color:var(--color-gold)] transition-colors hover:border-[color:var(--color-gold)] hover:text-[color:var(--color-gold-light)]"
+                                >
+                                  {actionIcon(action.type)}
+                                </a>
+                              ))}
+                            </div>
                           ) : null}
                         </div>
                       </div>
