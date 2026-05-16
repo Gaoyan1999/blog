@@ -12,7 +12,7 @@ export const profile = {
 };
 
 export type ProjectTimelineAction = {
-  type: "github" | "video" | "project";
+  type: "github" | "video" | "project" | "bilibili";
   href: string;
   label: string;
 };
@@ -37,6 +37,7 @@ export type ProjectTimelineItem =
         src: string;
         alt: string;
       };
+      actions?: ProjectTimelineAction[];
       stack: string[];
       highlights: string[];
     }
@@ -132,6 +133,13 @@ export const projectTimeline: ProjectTimelineItem[] = [
     org: "Personal AI Learning Tool",
     period: "2026.05.07",
     link: "https://github.com/Gaoyan1999/lingua-mate",
+    actions: [
+      {
+        type: "bilibili",
+        href: "https://www.bilibili.com/video/BV1yTRzBpEPk/?spm_id_from=333.1387.homepage.video_card.click",
+        label: "Lingua Mate Bilibili video",
+      },
+    ],
     stack: ["Python", "TypeScript", "Vite", "Whisper", "Codex Skill"],
     highlights: [
       "Built a Codex skill that turns English videos or podcasts into local language-learning web pages.",
