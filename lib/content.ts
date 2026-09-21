@@ -252,7 +252,10 @@ export const education: EducationItem[] = [
     school: "University of Technology Sydney",
     degree: "Master of Information Technology",
     period: "2025.07 — 2027.06",
-    highlights: ["WAM 86.75 — High Distinction average (Semester 1)"],
+    highlights: [
+      "WAM 86.75 — High Distinction average (Semester 1)",
+      "WAM 90.5 — High Distinction average (Semester 2)",
+    ],
   },
   {
     school: "Shanghai Institute of Technology",
